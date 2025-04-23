@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/brdglanding/static/css/main.f70bc9a3.css",
+    "main.js": "/brdglanding/static/js/main.861e46e8.js",
+    "static/js/453.bc1d2b73.chunk.js": "/brdglanding/static/js/453.bc1d2b73.chunk.js",
+    "index.html": "/brdglanding/index.html",
+    "main.f70bc9a3.css.map": "/brdglanding/static/css/main.f70bc9a3.css.map",
+    "main.861e46e8.js.map": "/brdglanding/static/js/main.861e46e8.js.map",
+    "453.bc1d2b73.chunk.js.map": "/brdglanding/static/js/453.bc1d2b73.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f70bc9a3.css",
+    "static/js/main.861e46e8.js"
+  ]
+}
