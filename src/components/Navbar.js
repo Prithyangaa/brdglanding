@@ -36,14 +36,17 @@ export default function Navbar() {
   return (
     <nav className={`navbar ${showNavbar ? 'active' : 'hidden'}`}>
       <div className="logo" onClick={() => scrollToSection('hero')}>
-        brdg.
+        BRDG.
       </div>
       <ul className="nav-links">
         <li>
-          <span onClick={() => scrollToSection('what-is-brdg')}>Why BRDG?</span>
+          <span onClick={() => scrollToSection('ScrollSection')}>What?</span>
         </li>
         <li>
-          <span onClick={() => scrollToSection('core-pillars')}>How it works</span>
+          <span onClick={() => scrollToSection('ScrollSection')}>Why?</span>
+        </li>
+        <li>
+          <span onClick={() => scrollToSection('ScrollSection')}>How?</span>
         </li>
         <li>
           <span onClick={() => scrollToSection('governance')}>Features</span>

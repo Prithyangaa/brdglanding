@@ -38,8 +38,8 @@
   cursor: pointer;
   font-weight: 600;
   transition: color 0.2s;
-  color: white;
-  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.7); /* better visibility */
+  color: #00afff;
+  
 }
 
 .nav-links li span:hover {

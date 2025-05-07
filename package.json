@@ -11,6 +11,7 @@
     "framer-motion": "^12.9.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-feather": "^2.0.10",
     "react-scripts": "5.0.1",
     "three": "^0.176.0",
     "vanta": "^0.5.24",

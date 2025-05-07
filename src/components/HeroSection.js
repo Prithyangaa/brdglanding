@@ -12,10 +12,10 @@ export default function HeroSection() {
 
       <div className="hero-content">
         <div className="hero-left">
-          <h1>The new infrastructure for opportunity.</h1>
+          <h1>THE NEW INFRASTRUCTURE <n>FOR OPPORTUNITY.</n></h1>
           <p>
-            brdg helps people earn, connect, grow and govern. <br />
-            A decentralised ecosystem where skill, value, and trust drive reputation — not credentials.
+            BRDG helps you earn, connect, grow and govern! <br />
+            The decentralised ecosystem where skill, value, and trust drives your reputation, not credentials.
           </p>
           <button>Join the Waitlist</button>
         </div>

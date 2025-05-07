@@ -44,21 +44,21 @@ export default function ScrollSection() {
   }, []);
 
   return (
-    <section id="what-is-brdg" className="scroll-section">
+    <section className="scroll-section">
       <div className="left-column">
         <div ref={whatRef} id="what-section" className="text-block">
-          <h2>What is brdg?</h2>
-          <p>brdg is not another platform. It’s the foundation for the next economy.</p>
+          <h2>THE SYSTEM BEHIND THE OPPORTUNITY</h2>
+          <p>BRDG is the foundation for the next economy, replacing outdated systems with decentralized, trust-first infrastructure. In this ecosystem, profiles are proof, reputation is earned, payments are secured, communities grow, and users govern, not just consume. BRDG combines tools for work, financial empowerment, identity, and connection into one open, future-ready platform, enabling a more transparent and efficient way of engaging in the digital world.</p>
         </div>
 
         <div ref={whyRef} id="why-section" className="text-block">
-          <h2>Why brdg Exists</h2>
-          <p>brdg rebuilds trust and income around action, not credentials.</p>
+          <h2>Why brdg Exists?</h2>
+          <p>The world needs a way to work without relying on a CV, to earn without fear of fraud or delay, to grow without depending on who you know, to connect through value rather than vanity, and a system that isn’t owned by Big Tech but by you. BRDG isn’t just a marketplace; it’s the infrastructure for independence.</p>
         </div>
 
         <div ref={whoRef} id="who-section" className="text-block">
-          <h2>Who brdg Is For</h2>
-          <p>Builders, creators, learners, collaborators — anyone ready to build value.</p>
+          <h2>Who brdg Is For?</h2>
+          <p>We don’t ask who you are — we ask what you can do. If you’re building, learning, offering, or ready for something greater, BRDG is for you. Whether you're starting your journey, scaling your skills, seeking collaborators, hiring with purpose, or building an authentic reputation, BRDG gives you the tools to grow.</p>
         </div>
       </div>
 
@@ -67,6 +67,17 @@ export default function ScrollSection() {
         {currentSection === 'why-brdg' && <img src={whyBrdgImg} alt="Why BRDG Exists" />}
         {currentSection === 'who-is-for' && <img src={whoForImg} alt="Who BRDG is For" />}
       </div>
+      <div className="bg-particles">
+        {[...Array(12)].map((_, i) => (
+          <span key={i} className="particle" style={{
+            top: `${Math.random() * 100}%`,
+            left: `${Math.random() * 100}%`,
+            animationDelay: `${Math.random() * 20}s`,
+            backgroundColor: i % 2 === 0 ? '#00AFFF66' : '#172A3B33'
+          }} />
+        ))}
+      </div>
+
     </section>
   );
 }

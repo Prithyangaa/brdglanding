@@ -1,0 +1,335 @@
+.feature-animation-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+  height: 100%;
+  border-radius: 16px;
+  transition: background 0.5s ease;
+}
+
+.feature-title {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.feature-title h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.feature-tagline {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #6b7280;
+  font-style: italic;
+  opacity: 0;
+  animation: fadeIn 0.8s ease 0.3s forwards;
+}
+
+.nodes-container {
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+  margin-bottom: 30px;
+  padding: 40px 0;
+}
+
+/* Liquid background blob effect */
+.liquid-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.liquid-blob {
+  position: absolute;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  filter: blur(50px);
+  transition: left 1.5s ease-in-out;
+  opacity: 0.7;
+  z-index: 0;
+}
+
+
+/* SVG Path connections */
+.connection-paths {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  transform: translateY(-50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.connection-path {
+  fill: none;
+  stroke: #e5e7eb;
+  stroke-width: 2;
+  stroke-dasharray: 5, 3;
+  transition: stroke 1s ease;
+  opacity: 0.6;
+}
+
+.connection-path.active-path {
+  stroke-dasharray: none;
+  opacity: 1;
+  stroke-width: 3;
+}
+
+.connection-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  transform: translateY(-50%);
+  border-radius: 4px;
+  overflow: visible;
+  z-index: 1;
+}
+
+.active-connection {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transition: width 1.5s ease-in-out, opacity 0.3s ease;
+  z-index: 2;
+  border-radius: 4px;
+}
+
+.hovered-connection {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+  z-index: 3;
+}
+
+.nodes-wrapper {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 5;
+  margin: 0 -15px;
+}
+
+/* Node wrapper - STATIC, no movement */
+.node-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  width: 80px;
+  position: relative;
+  margin: 0 5px;
+  /* Fixed height to ensure consistent layout */
+  height: 140px;
+}
+
+/* Node - NO transforms or movement on hover */
+.node {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e5e7eb;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  filter: grayscale(1);
+  flex-direction: column;
+  margin-bottom: 8px;
+  transition: filter 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Visual-only changes on hover - NO movement */
+.node-wrapper:hover .node {
+  filter: grayscale(0);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.node.active {
+  filter: grayscale(0);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.node-icon {
+  font-size: 32px;
+  transition: color 0.3s ease;
+}
+
+.node.active .node-icon {
+  color: white;
+}
+
+/* Node Title */
+.node-text {
+  font-size: 10px;
+  margin-top: 2px;
+  text-align: center;
+  color: #333;
+  line-height: 1.2;
+  max-width: 70px;
+}
+
+.node.active .node-text,
+.node:hover .node-text {
+  color: #fff;
+}
+
+.node-wrapper:hover .node-title {
+  color: #111827;
+}
+
+.node-title.active {
+  color: #111827;
+}
+
+/* Node Description - Fixed position */
+.node-description {
+  font-size: 10px;
+  color: #4b5563;
+  text-align: center;
+  width: 80px;
+  position: absolute;
+  top: 90px; /* Fixed position below node */
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 6px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+}
+
+.node-wrapper:hover .node-description {
+  opacity: 1;
+}
+
+.node-description.active {
+  opacity: 1;
+}
+
+/* Info Card for detailed node information */
+.info-card {
+  margin-top: 40px;
+  padding: 20px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+  transition: all 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.info-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.info-description {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #4b5563;
+  margin-bottom: 16px;
+}
+
+.info-details {
+  padding-left: 20px;
+}
+
+.info-details li {
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: #6b7280;
+  position: relative;
+}
+
+.info-details li:before {
+  content: "•";
+  position: absolute;
+  left: -15px;
+  color: currentColor;
+}
+
+/* Animation for liquid flow effect */
+@keyframes liquidPulse {
+  0% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.7; }
+}
+
+.active-connection:after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: inherit;
+  animation: liquidPulse 2s infinite;
+}
+
+.hover-info-popup {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  transform: translate(20px, -50%);
+  width: 240px;
+  padding: 16px;
+  border-left: 4px solid var(--primary);
+  border-radius: 8px;
+  background: #f9fafb;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.hover-info-popup h3 {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  font-weight:bold;
+}
+
+.hover-info-popup .info-description {
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.hover-info-popup .info-details {
+  padding-left: 16px;
+  list-style: disc;
+}
