@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/brdglanding/static/css/main.43bfcf6e.css",
+    "main.js": "/brdglanding/static/js/main.c125f541.js",
+    "static/js/453.bc1d2b73.chunk.js": "/brdglanding/static/js/453.bc1d2b73.chunk.js",
+    "static/media/what-brdg.png": "/brdglanding/static/media/what-brdg.77c9086dd0cf6a432045.png",
+    "static/media/sample.png": "/brdglanding/static/media/sample.045a9890b1c9ac36ce35.png",
+    "static/media/who-brdg.png": "/brdglanding/static/media/who-brdg.6b5ee2aba06dd63882c2.png",
+    "static/media/why-brdg.png": "/brdglanding/static/media/why-brdg.223cb150bb4b510f2888.png",
+    "index.html": "/brdglanding/index.html",
+    "main.43bfcf6e.css.map": "/brdglanding/static/css/main.43bfcf6e.css.map",
+    "main.c125f541.js.map": "/brdglanding/static/js/main.c125f541.js.map",
+    "453.bc1d2b73.chunk.js.map": "/brdglanding/static/js/453.bc1d2b73.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.43bfcf6e.css",
+    "static/js/main.c125f541.js"
+  ]
+}
