@@ -57,7 +57,7 @@ export default function ScrollSection() {
         </div>
 
         <div ref={whoRef} id="who-section" className="text-block">
-          <h2>Who brdg Is For?</h2>
+          <h2>Who BRDG Is For?</h2>
           <p>We don’t ask who you are — we ask what you can do. If you’re building, learning, offering, or ready for something greater, BRDG is for you. Whether you're starting your journey, scaling your skills, seeking collaborators, hiring with purpose, or building an authentic reputation, BRDG gives you the tools to grow.</p>
         </div>
       </div>

@@ -10,7 +10,8 @@ export default function Navbar() {
   };
 
   const [showNavbar, setShowNavbar] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const [lastScrollY, setLastScrollY] = useState(window.scrollY);
+
 
   useEffect(() => {
     const controlNavbar = () => {
@@ -40,16 +41,16 @@ export default function Navbar() {
       </div>
       <ul className="nav-links">
         <li>
-          <span onClick={() => scrollToSection('ScrollSection')}>What?</span>
+          <span onClick={() => scrollToSection('what-section')}>What?</span>
         </li>
         <li>
-          <span onClick={() => scrollToSection('ScrollSection')}>Why?</span>
+          <span onClick={() => scrollToSection('why-section')}>Why?</span>
         </li>
         <li>
-          <span onClick={() => scrollToSection('ScrollSection')}>How?</span>
+          <span onClick={() => scrollToSection('who-section')}>Who?</span>
         </li>
         <li>
-          <span onClick={() => scrollToSection('governance')}>Features</span>
+          <span onClick={() => scrollToSection('work-section')}>Features</span>
         </li>
         <li>
           <span onClick={() => scrollToSection('faqs')}>FAQs</span>

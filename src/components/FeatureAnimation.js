@@ -191,9 +191,9 @@ export default function FeatureAnimation({ activeFeature }) {
   return (
     <div className="feature-animation-container" ref={animationRef}>
       <div className="feature-title">
-        {activeFeature === 'work' && <h2>X Rating™ System</h2>}
-        {activeFeature === 'bank' && <h2>Community Governance</h2>}
-        {activeFeature === 'play' && <h2>Skill Development</h2>}
+        {activeFeature === 'work' && <h2>WORK</h2>}
+        {activeFeature === 'bank' && <h2>BANK</h2>}
+        {activeFeature === 'play' && <h2>PLAY</h2>}
       </div>
       
       {/* Node Connection Graph */}

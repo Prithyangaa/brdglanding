@@ -1,0 +1,59 @@
+/* what.css */
+.scroll-section {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8%;
+  min-height: 80vh;
+  overflow: hidden;
+  background-size: 600% 600%;
+}
+
+.left-column {
+  flex: 1;
+  width: 50%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.text-block {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right-column {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-column img {
+  width: 90%;
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.left-column h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+  color: #00AFFF;
+}
+
+.left-column p {
+  font-size: clamp(1.125rem, 2vw, 1.25rem);
+  line-height: 1.7;
+  color: #235179;
+  max-width: 600px;
+}

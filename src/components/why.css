@@ -1,0 +1,97 @@
+/* why.css */
+.why-full-section {
+  padding: 80px 5%;
+  background: #f6f9fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.why-full-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #172A3B;
+}
+
+.why-table-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.why-column {
+  flex: 1;
+  background: white;
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+  min-width: 600px;
+}
+
+.why-column:hover {
+  transform: scale(1.03);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.why-column h3 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #30516d;
+}
+
+.why-column.brdg h3 {
+    font-size: 32px;
+}
+
+.why-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  padding: 40px 70px;
+}
+
+.why-column ul li {
+  font-size: 20px;
+  color: #444;
+  margin-bottom: 12px;
+  line-height: 1.6;
+  padding-left: 1.5em;
+  position: relative;
+}
+
+.why-column.traditional ul li {
+  color: #b91c1c;
+}
+
+.why-column.brdg ul li {
+  color: #059669;
+  
+}
+
+.why-column ul li::before {
+  position: absolute;
+  left: 0;
+}
+
+@media (max-width: 768px) {
+  .why-table-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .why-column {
+    width: 100%;
+    max-width: 90%;
+  }
+}

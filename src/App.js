@@ -9,14 +9,18 @@ import Navbar from './components/Navbar';
 import FAQs from './components/FAQs';
 import ScrollSection from './components/ScrollSection';
 import CoreFeaturesSection from './components/CoreFeaturesSection';
-
+import WhatBrdg from './components/what';
+import WhyBrdg from './components/why';
+import WhoBrdg from './components/who';
 
 function App() {
   return (
     <div className="App">
       <Navbar />
       <HeroSection />
-      <ScrollSection />
+      <WhatBrdg />
+      <WhyBrdg />
+      <WhoBrdg />
       <CoreFeaturesSection/>
       <JoinTheWaitlist /> 
       <FAQs />

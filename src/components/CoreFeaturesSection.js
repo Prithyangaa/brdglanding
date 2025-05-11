@@ -38,23 +38,20 @@ export default function CoreFeaturesSection() {
       </div>
       <div className="feature-right">
         <div id="work-section" ref={workRef} className={`feature-block ${currentFeature === 'work' ? 'active' : ''}`}>
-          <h2>WORK</h2>
-          <p>Your BRDG Profile™ is your operating system for visibility.
-          Video-first. Skill-tagged. Action-based.
-          Designed to help people see what you can actually do — not what you claim.
+          <h2>Proof, Not Promises.</h2>
+          <p>Your BRDG Profile™ is your operating system for visibility. Video-first. Skill-tagged. Action-based. Designed to help people see what you can actually do — not what you claim.
           </p>
         </div>
         <div id="bank-section" ref={bankRef} className={`feature-block ${currentFeature === 'bank' ? 'active' : ''}`}>
-          <h2>BANK</h2>
-          <p>Vault™ secures every transaction — with milestone tracking and trust-first design.
-          No late payments. No platform holds. Just fair, verified flow of value.
+          <h2>You Vote. You Own.</h2>
+          <p>Every task, rule, or reward on BRDG is shaped by contributors. Propose, discuss, and vote on upgrades — from feature changes to funding — through decentralised governance.
+
+
           </p>
         </div>
         <div id="play-section" ref={playRef} className={`feature-block ${currentFeature === 'play' ? 'active' : ''}`}>
-          <h2>PLAY</h2>
-          <p>BRDG Explorer and The Connection Lab™ help you find local and global spaces to build, connect and belong.
-          You meet collaborators — not just contacts.
-          You create experiences — not just profiles.
+          <h2>Growth Through Doing.</h2>
+          <p>BRDG verifies your skills through action — not checkboxes. Complete tasks, share results, and level up through contribution, not credentials or inflated endorsements.
           </p>
         </div>
       </div>
