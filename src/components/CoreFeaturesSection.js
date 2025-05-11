@@ -45,8 +45,6 @@ export default function CoreFeaturesSection() {
         <div id="bank-section" ref={bankRef} className={`feature-block ${currentFeature === 'bank' ? 'active' : ''}`}>
           <h2>You Vote. You Own.</h2>
           <p>Every task, rule, or reward on BRDG is shaped by contributors. Propose, discuss, and vote on upgrades — from feature changes to funding — through decentralised governance.
-
-
           </p>
         </div>
         <div id="play-section" ref={playRef} className={`feature-block ${currentFeature === 'play' ? 'active' : ''}`}>
